@@ -73,7 +73,7 @@
   }
   .text p{
     font-size: 1rem;
-    width: 350px;
+    width: 320px;
     margin-bottom: 50px;
   }
   header{
@@ -87,6 +87,9 @@
   }
   .card{
     width: 300px;
+  }
+  .line{
+    width: 250px;
   }
   .slide1, .slide2{
     flex-direction: column;
@@ -184,5 +187,8 @@
     align-items: flex-start;
     flex-direction: column;
     text-align: start;
+  }
+  .slider img{
+    width: 280px;
   }
 }

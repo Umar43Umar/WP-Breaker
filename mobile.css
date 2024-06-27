@@ -167,7 +167,7 @@
     margin-top: 0px;
   }
   .footer .container > *:last-child{
-    align-self: auto;
+    align-self: center;
   }
   ul{
     justify-content: center;

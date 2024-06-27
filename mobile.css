@@ -167,10 +167,19 @@
     margin-top: 0px;
   }
   .footer .container > *:last-child{
-    align-self: center;
+    align-self: flex-start;
   }
   ul{
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  ul>div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
   }
 }

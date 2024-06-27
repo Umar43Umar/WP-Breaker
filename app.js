@@ -1,8 +1,32 @@
 //for accordions
 document.getElementById("defaultOpen").click();
-const acc = document.querySelectorAll(".accordion"); 
+const acc = document.querySelectorAll(".accordion");
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (acc.length > 0) {
+    acc[0].classList.add("active");
+    const panel = acc[0].nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    const div = acc[0].querySelector("div");
+    if (div) {
+      div.style.width = "100%";
+    }
+  }
+});
+
 for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
+    for (let j = 0; j < acc.length; j++) {
+      if (acc[j] !== this) {
+        acc[j].classList.remove("active");
+        const panel = acc[j].nextElementSibling;
+        panel.style.maxHeight = null;
+        const div = acc[j].querySelector("div");
+        if (div) {
+          div.style.width = "0%";
+        }
+      }
+    }
     this.classList.toggle("active");
     const panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -11,7 +35,7 @@ for (let i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
 
-    const div = this.querySelector("div"); 
+    const div = this.querySelector("div");
     if (div) {
       if (div.style.width === "0%" || div.style.width === "") {
         div.style.width = "100%";
@@ -21,6 +45,7 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
 
 // for tabs
 

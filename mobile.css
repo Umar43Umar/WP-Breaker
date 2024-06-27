@@ -169,6 +169,9 @@
   .footer .container > *:last-child{
     align-self: flex-start;
   }
+  .navbar > ul{
+    align-items: flex-start;
+  }
   ul{
     justify-content: center;
     align-items: flex-end;

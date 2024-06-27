@@ -59,6 +59,16 @@ nav   p{
   color: white;
   line-height: 4rem;
 }
+.head>.text>h1{
+  transform: translateX(-1200px);
+  animation: heading  1s forwards ease-in;
+}
+@keyframes heading{
+  to{
+      transform: translateY(0);
+  }
+}
+
 h1   span{
   background-color: #222831;
   padding: 0.25rem 0.5rem;
@@ -71,11 +81,12 @@ h1   span{
 .moblog{
   display: none;
 }
-.text   a{
+.text a{
   color: #222831;
   font-weight: bold;
   border: 2px solid #222831;
   padding: 0.5rem 3rem;
+  cursor: pointer;
 }
 .img{
   margin-right: 100px;
@@ -87,7 +98,12 @@ h1   span{
   z-index: 1;
   top: 50%;   
   left: 50%; 
-  transform: translate(140%, -40%); 
+  transform: translate(140%, -40%);
+  animation: fadeIn 2s; 
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .img   .ellipse{
   position: absolute;
@@ -623,9 +639,7 @@ h1   span{
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 1.5rem;
 }
-.logodiv{
-  width: 400px;
-}
+
 .footer > .container  img{
   width: 150px;
 }
@@ -718,7 +732,7 @@ h1   span{
       padding: 2rem;
   }
   .slide-1 , .slide-2 , .slide-3 , .slide-4  {
-    margin-right: 80px!important;
+    margin-right: 60px!important;
   }
 }
 @media (min-width: 1200px) {

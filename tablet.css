@@ -8,30 +8,42 @@
 }
 
 .hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(-45deg) !important;
   background: white;
+  position: fixed;
+  z-index: 1000;
 }
 
 .hamburger.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(45deg) !important;
   background: white;
+  position: fixed;
+  z-index: 1000;
+  margin-top: 8px;
 }
+
 .navbar{
   padding: 15px 10px;
 }
 .navbar ul {
   position: fixed;
   left: -200%;
-  top: 70px;
+  top: 0px;
+  bottom: 0;
   gap: 0;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   width: 100%;
   transition: 0.3s;
   padding: 25px 15px;
+  z-index: 100;
 }
 .navbar.active ul {
   left: 0;
+  height: 100vh;
+  margin-top: 0px;
 }
 
 .navbar ul li {

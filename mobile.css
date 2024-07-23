@@ -193,10 +193,10 @@
     margin-top: 0px;
   }
   .footer .container > *:last-child{
-    align-self: flex-start;
+    align-self: center;
   }
   .navbar > ul{
-    align-items: center;
+    align-items: flex-start;
   }
   ul{
     justify-content: center;

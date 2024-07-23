@@ -86,7 +86,7 @@
     margin-bottom: 50px;
   }
   header{
-    height: 500px;
+    height: 80vh;
   }
   .main .first .text h1{
     font-size: 1.75rem;
@@ -196,7 +196,7 @@
     align-self: flex-start;
   }
   .navbar > ul{
-    align-items: flex-start;
+    align-items: center;
   }
   ul{
     justify-content: center;
@@ -213,5 +213,8 @@
   }
   .slider img{
     width: 280px;
+  }
+  .footer .container  *:last-child  .list div{
+    margin: auto;
   }
 }
